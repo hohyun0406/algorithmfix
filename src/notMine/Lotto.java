@@ -1,3 +1,5 @@
+package notMine;
+
 import java.util.Random;
 
 /**
@@ -76,7 +78,7 @@ class LottoDraw implements ILottoDraw{
     @Override
     public int[] createArrayWithoutDuplicates(int[] arr) {
         for(int i=0; i<6; i++){
-            int randomNumber = createRandomNumber(1,45);
+            int randomNumber = createRandomNumber(1,8);
             boolean check = false;
             for(int j=0; j<6; j++){
                 if(arr[j] == randomNumber){
