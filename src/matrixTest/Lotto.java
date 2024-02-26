@@ -8,7 +8,7 @@ public class Lotto {
         for (int i = 0; i < 6; i++) {
             int randomNum = (int) (Math.random() * 45 + 1);
             lotto[i] = randomNum;
-            for (int j = 0; j < i; j++) {//방금 뽑은 번호를 뽑은 자리의 번호랑만 비교해줘
+            for (int j = 0; j < i; j++) {//방금 뽑은 번호를 이미 뽑았던 자리의 번호랑만 비교해줘
                 if (lotto[i] == lotto[j]) {
                     i--;
                     break; //만약에 똑같으면 처음으로 돌아가서 같은 자리 다른 번호 뽑는거 해줘(i--)
