@@ -1,22 +1,34 @@
 package matrixTest;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class LottoMatching {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         IBuyLotto buy = new BuyLotto();
         IDrawLotto draw = new DrawLotto();
         IMatchLotto match = new MatchLotto();
 
+        //당첨 번호 추첨
         int[] arr = new int[6];
-
         arr = draw.createLottoWithoutDuplicates(arr); //겹치지 않는 로또 만들기
         arr = draw.sortAscending(arr); //오름차순 정렬
         draw.printLotto(arr); //출력(?)하기
+
+
+        //구입 로또
+        int[] arr2 = new int[6];
+        arr2 = buy.buyLotto(sc); //로또 입력하기
+        arr2 = draw.sortAscending(arr2); //오름차순 정렬
+        draw.printLotto(arr2); //출력(?)하기
+
+        System.out.println(match.rank(match.findsame(arr,arr2)));
+
     }
 }
 
-interface IBuyLotto {int[] buyLotto();}
+interface IBuyLotto {int[] buyLotto(Scanner sc);}
 interface IDrawLotto {
     int createRandomNumber(int start, int end);
     int[] createLottoWithoutDuplicates(int[] arr);
@@ -29,8 +41,14 @@ interface IMatchLotto {
 }
 class BuyLotto implements IBuyLotto {
     @Override
-    public int[] buyLotto() {
-        return new int[0];
+    public int[] buyLotto(Scanner sc) {
+        int[] BuyLotto = new int[6];
+
+        for (int i = 0; i < BuyLotto.length; i++) {
+            System.out.println("1부터 8까지 원하는 점수를 입력하십시오.");
+            BuyLotto[i] = sc.nextInt();
+        }
+        return BuyLotto;
     }
 }
 class DrawLotto implements IDrawLotto {
@@ -96,12 +114,34 @@ class DrawLotto implements IDrawLotto {
 class MatchLotto implements IMatchLotto {
     @Override
     public int findsame(int[] originLotto, int[] myLotto) {
-        return 0;
+        int count = 0;
+
+        for(int i=0;i<myLotto.length;i++){
+            for(int j=0;j<myLotto.length;j++){
+                if (originLotto[i]==myLotto[j]){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     @Override
     public String rank(int count) {
-        return null;
+        String rank = null;
+        switch (count){
+            case 6 : rank = "1등입니다.";
+            break;
+            case 5 : rank = "2등입니다.";
+            break;
+            case 4 : rank = "3등입니다.";
+            break;
+            case 3 : rank = "4등입니다.";
+            break;
+            case 2, 1, 0: rank = "꽝입니다.";
+            break;
+        }
+        return rank;
     }
 }
 
