@@ -1,6 +1,7 @@
 package baekjoon;
 
-import java.util.*;
+
+import java.util.Scanner;
 
 public class LV1Change {
 
@@ -23,4 +24,3 @@ public class LV1Change {
         }
 
 }
-
