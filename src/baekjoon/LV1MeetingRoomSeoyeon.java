@@ -1,5 +1,6 @@
 package beajoon;
-
+//이중배열정렬하기 *********서치********
+import javax.swing.plaf.IconUIResource;
 import java.util.Scanner;
 
 public class LV1MeetingRoomSeoyeon {
@@ -16,6 +17,14 @@ public class LV1MeetingRoomSeoyeon {
             meet[i][0] = sc.nextInt(); //배열 앞자리
             meet[i][1] = sc.nextInt(); //배열 뒷자리
             //각 자리수가 num 줄만큼 입력됨
+
+        }
+
+        for(int i=0;i<num;i++){
+            for(int j=0;j<2;j++){
+                System.out.print(meet[i][j]);
+            }
+            System.out.println();
         }
 
         //** 해결못한 부분 **
@@ -31,14 +40,14 @@ public class LV1MeetingRoomSeoyeon {
 
         //but! 반드시 이중배열 오름차순을 해결해야하는 상황.
 
-        int count = 0;
-        int meetingTime = 0;
-        for(int i=0;i<num;i++){
-            if(meetingTime <= meet[i][0]){
-                meetingTime = meet[i][1];
-                count++;
-            }
-        }
-        System.out.println(count);
+//        int count = 0;
+//        int meetingTime = 0;
+//        for(int i=0;i<num;i++){
+//            if(meetingTime <= meet[i][0]){
+//                meetingTime = meet[i][1];
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
     }
 }
