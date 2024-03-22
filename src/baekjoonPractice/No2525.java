@@ -29,11 +29,13 @@ public class No2525 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int timeNow[] = new int[2];
+        int hour = sc.nextInt();
+        int min = sc.nextInt();
 
+        int resultHour = 0;
+        int resultMin = 0;
 
-        int timeCook = sc.nextInt();
-
+        System.out.println(resultHour + " " + resultMin);
 
 
     }
