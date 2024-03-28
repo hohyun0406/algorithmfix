@@ -9,6 +9,7 @@ public class No2884 {
         int hour = sc.nextInt();
         int min = sc.nextInt();
 
+
         int resultHour = min < 45 ? hour == 0 ? 23 : hour-1 : hour ;
         int resultMin = min < 45 ? min + 15 : min - 45;
 
