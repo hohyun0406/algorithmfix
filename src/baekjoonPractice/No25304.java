@@ -1,5 +1,6 @@
 package baekjoonPractice;
 
+<<<<<<< HEAD
 import java.util.Scanner;
 
 public class No25304 {
@@ -18,5 +19,10 @@ public class No25304 {
         } else {
             System.out.println("No");
         }
+=======
+public class No25304 {
+    public static void main(String[] args) {
+
+>>>>>>> b3332406952535a0a5810f10c210fa67a65336c4
     }
 }
