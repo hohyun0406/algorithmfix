@@ -1,4 +1,4 @@
-package baekjoonPractice;
+package noob;
 
 import java.util.Scanner;
 

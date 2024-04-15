@@ -1,4 +1,4 @@
-package baekjoonPractice;
+package noob;
 
 public class No10171 {
     public static void main(String[] args) {

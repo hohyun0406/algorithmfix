@@ -1,4 +1,4 @@
-package baekjoonPractice;
+package baekjoonStep3;
 
 
 import java.io.*;
@@ -14,6 +14,6 @@ public class No15552 {
             st = new StringTokenizer(bufferedReader.readLine());
             bufferedWriter.write((Integer.parseInt(st.nextToken()+Integer.parseInt(st.nextToken())))+"\n");
         }
-        bufferedWriter.close();
+//        bufferedWriter.close();
     }
 }
