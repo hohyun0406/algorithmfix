@@ -23,13 +23,5 @@ public class No15552 {
 
             bufferedWriter.write(sum + "\n");
         }
-<<<<<<< HEAD:src/baekjoonStep3/No15552.java
-//        bufferedWriter.close();
-=======
-
-        bufferedWriter.flush();
-        bufferedWriter.close();
-        bufferedReader.close();
->>>>>>> 432764e79cba1aa1630a7a2ccdf00ef036c9c2dc:src/baekjoonPractice/No15552.java
     }
 }
