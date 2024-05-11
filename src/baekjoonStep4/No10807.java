@@ -1,8 +1,6 @@
 package baekjoonStep4;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class No10807 {
@@ -14,7 +12,7 @@ public class No10807 {
         int[] arr = new int[N];
 
         StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-        for(int i=0;i<N;i++){
+        for(int i = 0;i<N;i++){
             arr[i] = Integer.parseInt(stringTokenizer.nextToken());
         }
 
@@ -27,5 +25,6 @@ public class No10807 {
         }
 
         System.out.println(count);
+
     }
 }
